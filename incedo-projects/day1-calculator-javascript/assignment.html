@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        class BasicCal {
+
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+
+                console.log("Calculator started")
+            }
+
+            add(x, y) {
+                return x + " + " + y + " = " + (x + y);
+            }
+
+            subtract(x, y) {
+                return x + " - " + y + " = " + (x - y);
+            }
+
+            multiply(x, y) {
+                return x + " * " + y + " = " + (x * y);
+            }
+
+
+        }
+
+        BasicCal.prototype.divide = function (x, y) {
+
+            return x + " / " + y + " = " + (x / y);
+        }
+
+        class SciCal extends BasicCal {
+
+            sqrt(x) {
+
+                return Math.sqrt(x);
+            }
+            log(x) {
+
+                return Math.log(x)
+            }
+            sin(x) {
+
+                return Math.sin(x);
+            }
+            cos(x) {
+                return Math.cos(x);
+            }
+            tan(x) {
+                return Math.tan(x);
+            }
+
+        }
+
+        let c = new BasicCal(9, 1);
+        let s = new SciCal();
+        console.log("add method -->" + c.add(9, 1));
+        console.log("subtract method -->" + c.subtract(9, 1));
+        console.log("multiply method -->" + c.multiply(9, 1));
+        console.log("divide method -->" + c.divide(9, 1));
+        console.log("Square root method -->" + s.sqrt(9));
+        console.log("log method -->" + s.log(10));
+        console.log("sin method -->" + s.sin(10));
+        console.log("cos method -->" + s.cos(10));
+        console.log("tan method -->" + s.tan(10));
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
