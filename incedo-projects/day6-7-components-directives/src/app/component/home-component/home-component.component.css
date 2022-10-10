@@ -1,0 +1,10 @@
+h1{
+    color: crimson;
+}
+
+header {
+  background-image: url('incedo_Logo.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
