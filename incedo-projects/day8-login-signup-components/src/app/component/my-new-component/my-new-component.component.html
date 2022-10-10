@@ -1,0 +1,54 @@
+<div  class="table table-bordered" style="text-align:center; table-layout: fixed;">
+    <!-- *ngIf="isLoggedIn" -->
+    <a [routerLink]="['/home']"><button type="button" class="btn btn-primary">Home</button></a> 
+    <a [routerLink]="['/customer']"><button type="button" class="btn btn-primary">Customer Details</button></a> 
+    <a [routerLink]="['/customerForm']"><button type="button" class="btn btn-primary">Customer Form</button></a> 
+    <a [routerLink]="['/user']"><button type="button" class="btn btn-primary">User Details</button></a> 
+    <a [routerLink]="['/analysis']"><button type="button" class="btn btn-primary">Data Analysis</button></a> 
+    <a [routerLink]="['/contactus']"><button type="button" class="btn btn-primary">Contact Us</button></a>
+  </div>
+<h1>Customer Details</h1>
+<form ngForm>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="model.name" name="name">
+    </div>
+    
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number"  class="form-control" id="age"
+             [(ngModel)]="model.age" name="age">
+    </div>
+    
+      <button type="submit" class="btn btn-success" (click)=" createCustomer()">Submit</button> 
+      <button style="margin-left:20px" type="submit" class="btn btn-danger" (click)="confirmEditCustomer()">confirm edit</button>
+      
+<div>
+	<ol>
+    	<li style="text-align: right; margin-right: 150px;" *ngFor='let cust of custArray'>
+    	{{cust.name | uppercase}} <b>||</b> {{cust.age | testPipe :2}} 
+        <button type="button" class="btn btn-success" (click)="editCustomer(custArray.indexOf(cust))">edit</button>
+        <button type="button" class="btn btn-danger" (click)="deleteCustomer(custArray.indexOf(cust))">delete</button>
+   		</li>
+   </ol>
+   
+</div>
+<input type="button" (click)="getUserDetails()" value="Populate">
+    <table class="table table-bordered" style="text-align:center; table-layout: fixed;">
+        <tr>
+            <th>id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+    <tr appHighlightDirective value="silver"*ngFor='let user of getData'>
+        <td>{{user.id}}</td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.email}}</td>
+    </tr>
+
+</table>
+

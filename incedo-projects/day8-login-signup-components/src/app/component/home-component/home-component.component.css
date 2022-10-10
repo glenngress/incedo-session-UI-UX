@@ -1,0 +1,12 @@
+h1{
+    color: black;
+}
+
+body {
+  background-image: url("incedo_Logo.jpg");
+  background-size: 65%;
+  background-position: 60%;
+  background-attachment: fixed;
+
+  
+}

@@ -1,0 +1,24 @@
+<div>
+     <h1>Login Here</h1>
+      <form ngForm>
+        <div class="form-group">
+          <label for="username">username</label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="newLogin.username"  name="username">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="newLogin.password"  name="password">
+        </div>
+        <button type="submit" class="btn btn-success" (click)="login()">Submit</button>
+        <span>Don't have an account? 
+        <a routerLink="/signUp">signUp</a></span>
+      </form>
+  </div>
+
+  <div *ngIf="isLoggedIn" class="nav-bar">
+    <!-- *ngIf="isLoggedIn" -->
+    <a [routerLink]="['/home']">Home</a> 
+    <a [routerLink]="['/customer']">Customer Details</a> 
+    <a [routerLink]="['/customerForm']">Customer Form</a> 
+    <a [routerLink]="['/user']">User Details</a> 
+    <a [routerLink]="['/analysis']">Data Analysis</a> 
+    <a [routerLink]="['/contactus']">Contact Us</a>
+  </div>
