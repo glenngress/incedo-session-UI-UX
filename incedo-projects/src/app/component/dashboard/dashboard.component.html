@@ -1,0 +1,13 @@
+<div class="nav-bar">
+    <a [routerLink]="['/dashboard/home']"><button type="button" class="btn btn-primary" >Home</button></a> 
+    <a [routerLink]="['/dashboard/customer']"><button type="button" class="btn btn-primary" >Customer Details</button></a> 
+    <a [routerLink]="['/dashboard/customerform']"><button type="button" class="btn btn-primary" >Customer Form</button></a> 
+    <a [routerLink]="['/dashboard/user']"><button type="button" class="btn btn-primary" >User Details</button></a>
+    <a [routerLink]="['/dashboard/order']"><button type="button" class="btn btn-primary" >Order</button></a>  
+    <a [routerLink]="['/dashboard/analysis']"><button type="button" class="btn btn-primary" >Data Analysis</button></a> 
+    <a [routerLink]="['/dashboard/contactus']"><button type="button" class="btn btn-primary" >Contact Us</button></a>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  

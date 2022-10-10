@@ -1,0 +1,13 @@
+<div>
+    <nav>
+        <a [routerLink]="['/dashboard/order/normalOrder']"><button type="button" class="btn btn-primary" >Normal Order</button></a>||
+        <a [routerLink]="['/dashboard/order/premiumOrder']"><button type="button" class="btn btn-primary" >premium Order</button></a>
+    </nav>
+
+    <div style="color: red; margin-top: 1rem;">
+        Component Two's router outlet:
+    </div>
+    <div style="border: 2px solid red; padding: 1rem;">
+        <router-outlet></router-outlet>
+    </div>
+</div>
