@@ -1,0 +1,28 @@
+<div id="log">
+    <a [routerLink]="['']"><button type="button" class="btn btn-danger" >Log Out</button></a>
+</div>
+<h1>User Administration</h1>
+
+
+<div>
+    <table class="table table-bordered" style="text-align:center; table-layout: fixed;">
+        <tr appHighlightDirective value="lightblue">
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Active Form</th>
+            <th>Role</th>
+            <th>status</th>
+           
+        </tr>
+        <tr *ngFor='let user of loginUser'>
+            <td>{{user.userid}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.activefrom}}</td>
+            <td>{{user.role}}</td>
+            <td>{{user.status}}</td>
+            <td><span><input class="btn btn-warning" type="button" (click)="confirmButton(user.status,user.userid)" value=" Confirm "></span></td>
+            
+        </tr>
+<div id="add">
+    <a [routerLink]="['/add']"><input type="button" class="btn btn-warning" value=" Add " ></a>
+</div>

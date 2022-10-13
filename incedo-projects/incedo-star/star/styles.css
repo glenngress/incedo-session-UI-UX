@@ -1,0 +1,13 @@
+input {
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px coral;
+}
+
+button {
+    /* border-radius: 15px; */
+    box-shadow: 2px 2px 2px coral;
+}
+select {
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px coral;
+}

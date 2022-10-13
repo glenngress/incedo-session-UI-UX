@@ -1,0 +1,29 @@
+
+
+<a [routerLink]="['']"><button type="button" class="btn btn-danger" >Log Out</button></a>
+<div>
+  <table class="table table-bordered" style="text-align:center; table-layout: fixed;">
+      <tr appHighlightDirective value="lightblue">
+          <th>Name</th>
+          <th>SAP ID</th>
+          <th>Project hours</th>
+          <th>Holiday / leave hours</th>
+          <th>Afternoon Shift Days</th>
+          <th>Night Shift Days</th>
+          <th>Day eligible for TA</th>
+          <th>Transport Allowance</th>
+          <th>Total Allowance</th>
+         
+      </tr>
+      <tr *ngFor='let a of allow'>
+          <td>{{a.name}}</td>
+          <td>{{a.sapid}}</td>
+          <td>{{a.projectHours}}</td>
+          <td>{{a.holidayLeaveHours}}</td>
+          <td>{{a.afternoonShiftDays}}</td>
+          <td>{{a.nightShiftDays}}</td>
+          <td>{{a.dayEligibleForTA}}</td>
+          <td>{{a.transportAllowance}}</td>
+          <td>{{a.totalAllowance}}</td>
+      </tr>
+      <td style="right: 50%;"><span><input class="btn btn-warning" type="button" value=" Approve and Download "></span></td>

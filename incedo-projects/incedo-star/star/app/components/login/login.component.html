@@ -1,0 +1,18 @@
+<div>
+  
+  <div class="card m-3" style="display: inline-block;">
+    <h5 class="card-header" style="display: inline-block,;">Login Here</h5>
+      <form ngForm id="center">
+        <div class="form-group col">
+          <label for="username">User ID</label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="newLogin.userid" name="username">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="newLogin.password" name="password">
+        </div>
+        <button type="submit" class="btn btn-success" (click)="login()">Submit</button>
+        <span>Don't have an account?
+          <a routerLink="/request">requestAccess</a></span>
+      </form>
+    
+  </div>
+</div>

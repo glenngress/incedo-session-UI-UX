@@ -1,0 +1,36 @@
+<div>
+    
+    <div class="card m-3" style="display: inline-block;">
+        <h5 class="card-header" style="display: inline-block,;">Request User Validation</h5>
+        <form id="center" ngForm>
+            <div class="form-group col">
+                <label for="userid">User ID</label>
+                <input type="text" class="form-control" id="userid" [(ngModel)]="newLogin.userid" name="userid">
+
+                <label for="name">Name</label>
+                <input type="name" class="form-control" id="name" [(ngModel)]="newLogin.name" name="name">
+
+                <label for="date">Date</label>
+                <input type="date" class="form-control" id="date" [(ngModel)]="newLogin.activefrom" name="date">
+
+                <label for="role">Role</label>
+                <select type="role" class="form-control" id="role" [(ngModel)]="newLogin.role" name="role">
+                    <option value=""></option>
+                    <option value="admin">admin</option>
+                    <option value="developer">developer</option>
+                    <option value="lead">lead</option>
+                </select>
+
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="newLogin.password"
+                    name="password">
+
+            </div>
+            <button type="submit" class="btn btn-success" (click)="requestSubmit()">Submit</button>
+            <button type="reset" class="btn btn-secondary"  (click)="onReset()">Cancel</button>
+            <span>have an account?
+                <a routerLink="/">login</a></span>
+        </form>
+    </div>
+
+</div>
